@@ -96,7 +96,7 @@
     ```
 
 - Skype
-    - Add it in Session Applications: **alacarte** Menu Editor
+    - Add it in Session Applications
         - On terminal: `gnome-session-properties`
         - Add: **skype**
 
