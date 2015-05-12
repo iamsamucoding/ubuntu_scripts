@@ -134,9 +134,8 @@
     - Open **~/.xbindkeysrc**
     - Type before the end section:
         ```
-        "terminator"
-        
-          control+apostrophe
+        "terminator"     
+            control+apostrophe
         ```
     - Now, on terminal, reload the xbindkeys
 
