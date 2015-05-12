@@ -10,10 +10,10 @@
 2. Install Atlas on Performance Mode
     - **script:** ././atlas_+_numpy/intall_atlas.sh
     - **info:** ./atlas_+_numpy/README.txt
-    - If you cannot install it, install the normal version which is in **./intall_dev_programs.sh**
+    - If you cannot install it, install the normal version which is in **./install_dev_programs.sh**
 
 3. Install Dev Programs
-    - **script:** ./intall_dev_programs.sh
+    - **script:** ./install_dev_programs.sh
 
 4. Do the Manual Installation
     - Instructions below
