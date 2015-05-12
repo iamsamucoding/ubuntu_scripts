@@ -88,7 +88,7 @@
     ```
     - Restart the terminal
         
-- Install Multimedia Codecs and Enable DVD Playback (it requires of an <Enter> in a new window)
+- Install Multimedia Codecs and Enable DVD Playback (it requires an Enter in a new window)
     ```
     sudo apt-add-repository -y ppa:mc3man/trusty-media
     sudo apt-get -y update
