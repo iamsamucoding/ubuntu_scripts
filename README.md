@@ -1,4 +1,4 @@
-## Things to do after installing Elementaty OS
+## Things to do after installing Elementary OS
 
 #### Installation Sequence
 1. Install Common Programs
@@ -29,7 +29,7 @@
 
 - Enable Minimize Window Buttom: http://itsfoss.com/add-minimize-button-in-elementary-os-luna/
     - Install the elementary-tweaks
-    
+
         ```
         sudo add-apt-repository -y ppa:mpstark/elementary-tweaks-daily
         sudo apt-get update
