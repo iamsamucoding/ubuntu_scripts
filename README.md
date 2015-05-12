@@ -29,6 +29,7 @@
 
 - Enable Minimize Window Buttom: http://itsfoss.com/add-minimize-button-in-elementary-os-luna/
     - Install the elementary-tweaks
+    
         ```
         sudo add-apt-repository -y ppa:mpstark/elementary-tweaks-daily
         sudo apt-get update
@@ -67,7 +68,7 @@
     { "keys": ["ctrl+alt+h"], "command": "permute_lines", "args": {"operation": "shuffle"} },
     { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} }
     ]
-```
+    ```
 
 - Terminal History - https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
     - Create ~/.inputrc and fill it with this:
