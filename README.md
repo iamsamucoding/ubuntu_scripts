@@ -56,36 +56,36 @@
         - LateXTool
     - Copy the User Keybinds below to Preferences > User Keybinds
 
-    ```
-    [
-    { "keys": ["shift+alt+f"], "command": "reindent" },
+        ```
+        [
+        { "keys": ["shift+alt+f"], "command": "reindent" },
 
-    { "keys": ["ctrl+pagedown"], "command": "next_view_in_stack" },
-    { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
-    { "keys": ["ctrl+tab"], "command": "next_view" },
-    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
-    { "keys": ["ctrl+alt+r"], "command": "permute_lines", "args": {"operation": "reverse"} },
-    { "keys": ["ctrl+alt+h"], "command": "permute_lines", "args": {"operation": "shuffle"} },
-    { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} }
-    ]
-    ```
+        { "keys": ["ctrl+pagedown"], "command": "next_view_in_stack" },
+        { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
+        { "keys": ["ctrl+tab"], "command": "next_view" },
+        { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+        { "keys": ["ctrl+alt+r"], "command": "permute_lines", "args": {"operation": "reverse"} },
+        { "keys": ["ctrl+alt+h"], "command": "permute_lines", "args": {"operation": "shuffle"} },
+        { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} }
+        ]
+        ```
 
 - Terminal History - https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
     - Create ~/.inputrc and fill it with this:
-    ```
-    "\e[A": history-search-backward
-    "\e[B": history-search-forward
-    set show-all-if-ambiguous on
-    set completion-ignore-case on
+        ```
+        "\e[A": history-search-backward
+        "\e[B": history-search-forward
+        set show-all-if-ambiguous on
+        set completion-ignore-case on
 
-    # mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
-    "\e[1;5C": forward-word
-    "\e[1;5D": backward-word
-    "\e[5C": forward-word
-    "\e[5D": backward-word
-    "\e\e[C": forward-word
-    "\e\e[D": backward-word
-    ```
+        # mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+        "\e[1;5C": forward-word
+        "\e[1;5D": backward-word
+        "\e[5C": forward-word
+        "\e[5D": backward-word
+        "\e\e[C": forward-word
+        "\e\e[D": backward-word
+        ```
     - Restart the terminal
         
 - Install Multimedia Codecs and Enable DVD Playback (it requires an Enter in a new window)
