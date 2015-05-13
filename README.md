@@ -94,7 +94,6 @@
     sudo apt-get -y update
     sudo apt-get -y install ubuntu-restricted-extras ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav
     ```
-
 - Skype
     - Add it in Session Applications
         - On terminal: `gnome-session-properties`
@@ -136,7 +135,7 @@
         ```
         "terminator"
         
-        control+apostrophe
+        Control + Apostrophe
         ```
     - Now, on terminal, reload the xbindkeys
 
@@ -152,6 +151,22 @@
     - Add it to **alacarte** Menu Editor
     - Install Subclipse (SVN on Eclipse)
         - Help > Eclipse Marketplace
+
+- Gnome System Monitor
+    - Install it on Software Center
+    - Add the keybinding: ctrl+shift+esc
+        - Open **~/.xbindkeysrc**
+        - Type before the end section:
+            ```
+            "gnome-system-monitor"
+            
+            Control + Shift + Escape
+            ```
+        - Now, on terminal, reload the xbindkeys
+
+        `xbindkeys`
+    
+        - Your custom keybinding is ready!
 
 - Enable Banco do Brasil and Santander on Firefox
     ```
