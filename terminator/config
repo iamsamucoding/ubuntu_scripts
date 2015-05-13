@@ -1,0 +1,27 @@
+[global_config]
+  title_transmit_bg_color = "#da412c"
+  title_transmit_fg_color = "#000000"
+  title_inactive_bg_color = "#f7fe1e"
+[keybindings]
+  next_tab = <Ctrl>e
+  full_screen = <Ctrl>m
+  prev_tab = <Ctrl>q
+  close_term = <Ctrl>w
+  go_next = <Ctrl>Tab
+  new_tab = <Ctrl>t
+[profiles]
+  [[default]]
+    foreground_color = "#ffffff"
+    scrollback_lines = 2000
+    font = Monaco 16
+    allow_bold = False
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
