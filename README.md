@@ -135,7 +135,7 @@
         ```
         "terminator"
         
-        Control + Apostrophe
+        control+apostrophe
         ```
     - Now, on terminal, reload the xbindkeys
 
@@ -160,7 +160,7 @@
             ```
             "gnome-system-monitor"
             
-            Control + Shift + Escape
+            control+shift+escape
             ```
         - Now, on terminal, reload the xbindkeys
 
