@@ -15,6 +15,9 @@ mkdir $OUT_DIR
 mkdir $TEMP_DIR
 rm -rf $TEMP_DIR/*
 
+printf "\n---> Installing VIM\n"
+sudo apt-get -y install vim
+
 printf "\n---> Installing g++\n"
 sudo apt-get -y install g++
 

@@ -89,6 +89,11 @@ wget $LINK_TEAM_VIEWER -O $TEMP_DIR/teamviewer.deb
 sudo dpkg -i $TEMP_DIR/teamviewer.deb
 sudo apt-get -y -f install
 
+printf "\n---> Installing Deluge Torrent\n"
+sudo add-apt-repository -y ppa:deluge-team/ppa
+sudo apt-get -y update
+sudo apt-get -y install deluge
+
 printf "\n---> Installing Audacity\n"
 sudo add-apt-repository -y ppa:audacity-team/daily
 sudo apt-get update
