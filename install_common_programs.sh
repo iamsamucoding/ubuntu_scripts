@@ -105,6 +105,12 @@ sudo apt-get -y install furiusisomount
 printf "\n---> Alacarte - Menu editor\n"
 sudo apt-get -y install alacarte
 
+printf "\n---> Xterm (PlayOnLinux dependency)\n"
+sudo apt-get -y install xterm
+
+printf "\n---> Wine (PlayOnLinux dependency)\n"
+sudo apt-get -y install wine
+
 printf "\n---> Installing Play On Linux\n"
 wget $LINK_PLAY_ON_LINUX -O $TEMP_DIR/playonlinux.deb
 sudo dpkg -i $TEMP_DIR/playonlinux.deb
