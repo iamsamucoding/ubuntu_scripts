@@ -108,8 +108,10 @@ sudo apt-get -y install alacarte
 printf "\n---> Xterm (PlayOnLinux dependency)\n"
 sudo apt-get -y install xterm
 
-printf "\n---> Wine (PlayOnLinux dependency)\n"
-sudo apt-get -y install wine
+printf "\n---> Wine 1.7 (PlayOnLinux dependency)\n"
+sudo add-apt-repository -y ppa:ubuntu-wine/ppa
+sudo apt-get -y upgrade
+sudo apt-get -y wine1.7 winetricks
 
 printf "\n---> Installing Play On Linux\n"
 wget $LINK_PLAY_ON_LINUX -O $TEMP_DIR/playonlinux.deb
@@ -152,6 +154,9 @@ printf "\n---> Installing Java\n"
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-get -y update
 sudo apt-get -y install oracle-java$JAVA_VERSION-installer
+
+printf "\n---> Installing gMTP (Enables Mobile connection with PC)\n"
+sudo apt-get -y install gmtp 
 
 printf "\n##########################################################\n"
 
