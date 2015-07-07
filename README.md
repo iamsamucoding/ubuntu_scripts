@@ -47,6 +47,8 @@
     - Then, to install a package: On Sublime, press ctrl+shift+p, install Package and select the package
     - Some packages to install:
         - SideBarEnhancements
+        - SublimeLinter
+        - PackageResourceViewer
         - Alignment: ctrl+alt+a para alinhar
         - BracketHighlighter
         - AStyleFormatter - ctrl+alt+f para alinhar todo o arquivo, ctrl+k+f para alinhar um trecho selecionado
@@ -54,6 +56,12 @@
         - All autocomplete
         - Cython
         - LateXTool
+        - Git
+        - Trimmer: helps you remove unnecessary spaces, as well as trailing spaces
+        - MarkDownEditing: edit .md
+        - FileDiffs:  allows you to see the differences between two files in SublimeText
+        - DocBlockr: lets you create documentation or annotation for your codes with ease, by parsing the functions, parameters, variables, and automatically adding some possible documentation
+        - C++Snippets
     - Copy the User Keybinds below to Preferences > User Keybinds
 
         ```
