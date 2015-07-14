@@ -55,6 +55,9 @@ cp terminator/config ~/.config/terminator/
 printf "\n---> Installing Tree\n"
 sudo apt-get -y install tree
 
+printf "\n---> Installing Eye of Gnome\n"
+sudo apt-get -y install eog
+
 printf "\n---> Installing VLC Media Player\n"
 sudo apt-get -y install vlc
 
