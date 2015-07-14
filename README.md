@@ -62,6 +62,7 @@
         - FileDiffs:  allows you to see the differences between two files in SublimeText
         - DocBlockr: lets you create documentation or annotation for your codes with ease, by parsing the functions, parameters, variables, and automatically adding some possible documentation
         - C++Snippets
+        - C++11 StarterKit
     - Copy the User Keybinds below to Preferences > User Keybinds
 
         ```
@@ -72,6 +73,7 @@
         { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
         { "keys": ["ctrl+tab"], "command": "next_view" },
         { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+        { "keys": ["ctrl+t"], "command": "new_file" },
         { "keys": ["ctrl+alt+r"], "command": "permute_lines", "args": {"operation": "reverse"} },
         { "keys": ["ctrl+alt+h"], "command": "permute_lines", "args": {"operation": "shuffle"} },
         { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} }
@@ -175,6 +177,10 @@
         `xbindkeys`
     
         - Your custom keybinding is ready!
+
+
+- Xampp
+    - Download: https://www.apachefriends.org/xampp-files/5.6.8/xampp-linux-x64-5.6.8-0-installer.run
 
 - Enable Banco do Brasil and Santander on Firefox
     ```
