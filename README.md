@@ -97,6 +97,10 @@
         "\e\e[D": backward-word
         ```
     - Restart the terminal
+
+- Tex Live Packages
+    - Add in .bashrc:
+        PATH=$PATH:/usr/local/texlive/2014/bin/i386-linux
         
 - Install Multimedia Codecs and Enable DVD Playback (it requires an Enter in a new window)
     ```
