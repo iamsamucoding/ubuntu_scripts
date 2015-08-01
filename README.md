@@ -79,6 +79,11 @@
         { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} }
         ]
         ```
+    - Insert Custom User Preferences. Setting User:
+    "rulers": [100],
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true
+
 
 - Terminal History - https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
     - Create ~/.inputrc and fill it with this:
