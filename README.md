@@ -46,6 +46,7 @@
     - Install Package Control https://sublime.wbond.net/installation
     - Then, to install a package: On Sublime, press ctrl+shift+p, install Package and select the package
     - Some packages to install:
+        - Colorsublime
         - SideBarEnhancements
         - SublimeLinter
         - PackageResourceViewer
@@ -63,6 +64,19 @@
         - DocBlockr: lets you create documentation or annotation for your codes with ease, by parsing the functions, parameters, variables, and automatically adding some possible documentation
         - C++Snippets
         - C++11 StarterKit
+        - Markdown Preview
+        
+        For Web
+        - LiveReload - realoads the web page automatically after saving the source.
+        - ColorHighlighter
+        - Emmet - several snippets for web development
+        - LiveStyle - Live bi-directional CSS edit of new generation
+                    - if you edit the css by the browser, it is edit in the source file
+        - HTML5 - snippets and bundlers for HTML5
+        
+    - Install the themes in ./sublime/
+        - http://colorsublime.com/how-to-install-a-theme
+
     - Copy the User Keybinds below to Preferences > User Keybinds
 
         ```
