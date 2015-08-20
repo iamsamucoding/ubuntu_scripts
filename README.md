@@ -117,6 +117,41 @@
         ```
     - Restart the terminal
 
+- Clion:
+	- Download on https://www.jetbrains.com/clion/download/
+	- Import my custom (MyClionPreferences.jar) preferences on Clion:
+		- File > Import Setting
+		- My preferences includes color scheme, some configuration editor zoom with ctrl+scroll, show line number,
+		  font anti-aliasing, sublime-like keybind, etc.
+		- It is required the fonts: monaco.ttf and FreeSans.ttf 
+	- To create snippets:
+		- File > Settings > Editor > Live Templates
+	- Some interesting Custom Keybinds:
+		- Ctrl+shift+MouseButton1 = Adds carets (multiple cursors) where you click - like Ctrl+MouseButton1 on Sublime
+		- Ctrl+Alt+DragMouseButton1 = Add carets where in the lines that you select
+		- Alt+Shift+Up/Down = Clone a caret above/bottom
+		- Ctrl+MouseButton1 or F12 = Go to Definition
+		- Ctrl+Alt+Enter = Split Line - E.g: If the caret is in the half of a string and you enter
+										with this shortcut, the line will be splitted and the "" will
+										be added automatically
+		- Ctrl+. = Fold/Unfold code blocks
+		- Ctrl+P = Search a file - like Sublime
+		- Ctrl+Shift+P = Search a symbol, like Classes, Structs, Functions, Methods...
+		- Ctrl+Alt+P = Search Classes and Structs...
+		- Ctrl+H = Replace (in the current file)
+		- Ctrl+Shift+H = Replace in a path
+		- Ctrl+M or Shift+F4 = Open Source in a new window
+		- Ctrl+Shift+E = Split pane/editor vertically
+		- Ctrl+Shift+O = Split pane/editor horizontally
+		- Ctrl+Shift+W = Unsplit the current panes/editors
+		- Ctrl+Alt+Shift+W = Unsplit all panes/editors
+		- Ctrl+E = Move to the next Splitter
+		- Ctrl+Q = Move to the previou Splitter
+		- Alt+1 = Show/Hide the Project Tool Window
+		- Ctrl+T = Open Recent Files Window
+		- Ctrl+Shift+T = Reopen Closed Tabs
+		- Ctrl+F4 = Close All Tabs
+
 - Tex Live Packages
     - Add in .bashrc:
         PATH=$PATH:/usr/local/texlive/2014/bin/i386-linux
