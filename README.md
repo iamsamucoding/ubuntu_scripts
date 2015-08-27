@@ -43,6 +43,8 @@
         - Turn off: Single click
 
 - Configure Sublime Text
+    - Add the sublime font on Preferences > Settings User:
+        "font_face": "monaco",
     - Install Package Control https://sublime.wbond.net/installation
     - Then, to install a package: On Sublime, press ctrl+shift+p, install Package and select the package
     - Some packages to install:
@@ -249,4 +251,15 @@
     sudo apt-get install -y oracle-jdk7-installer icedtea-7-plugin 
     ```
 
-
+- Fixing the problem of accents on PlayOnLinux Office 2010:
+    - Open the .desktop of the Excel, Word, and PowerPoint
+        - they can be founded in ~/.local/share/applications/ or /local/share/applications/
+            - playonlinux-Microsoft Excel 2010.desktop 
+            - playonlinux-Microsoft Powerpoint 2010.desktop 
+            - playonlinux-Microsoft Word 2010.desktop 
+    - Replace the following comand in each one:
+        ```
+        Exec=env XMODIFIERS='' playonlinux --run "Microsoft Excel 2010" %F
+        Exec=env XMODIFIERS='' playonlinux --run "Microsoft Powerpoint 2010" %F
+        Exec=env XMODIFIERS='' playonlinux --run "Microsoft Word 2010" %F
+        ```

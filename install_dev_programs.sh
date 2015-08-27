@@ -27,6 +27,9 @@ sudo ln -s /usr/bin/colorgcc /usr/local/sbin/g++
 sudo ln -s /usr/bin/colorgcc /usr/local/sbin/gcc
 
 printf "\n---> Installing Git\n"
+sudo apt-get install -y doxygen
+
+printf "\n---> Installing Git\n"
 sudo apt-get update
 sudo apt-get -y install git
 git config --global user.name $GIT_USERNAME
