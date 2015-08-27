@@ -18,6 +18,9 @@ rm -rf $TEMP_DIR/*
 printf "\n---> Installing VIM\n"
 sudo apt-get -y install vim
 
+printf "\n---> Installing Cmake\n"
+sudo apt-get -y install cmake
+
 printf "\n---> Installing g++\n"
 sudo apt-get -y install g++
 
