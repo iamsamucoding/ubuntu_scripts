@@ -48,29 +48,83 @@
     - Install Package Control https://sublime.wbond.net/installation
     - Then, to install a package: On Sublime, press ctrl+shift+p, install Package and select the package
     - Some packages to install:
-        - Colorsublime
         - SideBarEnhancements
-        - SublimeLinter
         - PackageResourceViewer
         - Alignment: ctrl+alt+a para alinhar
         - BracketHighlighter
         - AStyleFormatter - ctrl+alt+f para alinhar todo o arquivo, ctrl+k+f para alinhar um trecho selecionado
         - ColorPicker: ctrl+shift+p, color... escolha a cor
-        - All autocomplete
         - Cython
         - LateXTool
         - Git
         - Trimmer: helps you remove unnecessary spaces, as well as trailing spaces
+        - DocBlockr: lets you create documentation or annotation for your codes with ease, by parsing the functions, parameters, variables, and automatically adding some possible documentation
         - MarkDownEditing: edit .md
         - FileDiffs:  allows you to see the differences between two files in SublimeText
-        - DocBlockr: lets you create documentation or annotation for your codes with ease, by parsing the functions, parameters, variables, and automatically adding some possible documentation
-        - C++Snippets
-        - C++11 StarterKit
+        - C++11
         - Markdown Preview
+        - Aligntab
         
+        - Clang-Complete (Auto completion to C/C++)
+            - https://packagecontrol.io/packages/Clang-Complete
+            ```
+            $ cd <sublime-text-3 Packages directory>  # see note above
+            $ git clone https://github.com/lvzixun/Clang-Complete.git
+            $ cd Clang-Complete
+            $ make linux
+            ```
+            - Go to the configuration file in *~/.config/sublime-text-3/Packages/Clang-Complete* and add the following content
+            ```
+            "additional_language_options":
+            {
+                // For example, you can use "c++": ["-std=c++11"] to enable C++11 features.
+                "c++" : ["-std=c++11"],
+                ...
+            },
+            
+            ...
+
+            // add the following include paths.
+            // CHECK the versions of GCC, CLANG, and LLVM
+            "include_options":
+            [
+                ...
+                "-isystem", "/usr/include",
+                "-isystem", "/usr/include/c++/*",
+                "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.8/include/",
+                "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed",
+                "-isystem", "/usr/lib/llvm-3.5/lib/clang/3.5.0/include/",
+                "-isystem", "/usr/local/opt/llvm/include",
+                "-Wall"
+            ],
+            ```
+            - In the configuration file of the projects, for example, **~/Dropbox/workspace/apps/ift/ift.sublime-project**, add
+            ```
+            "settings":
+            {
+                "cc_include_options":
+                [
+                    "-I/home/samuka/Dropbox/workspace/apps/ift/include"
+                ]
+            }
+            ```
+
+
         For Web
         - LiveReload - realoads the web page automatically after saving the source.
         - ColorHighlighter
+        - AutoFileName
+        - CSScomb // code style formatter
+        - Bootstrap3 Snippets
+        - Sass
+        - jQuery Snippets pack
+        - PHPIntel
+        - CSS Snippets
+        - CSS Completions
+        - CSS3
+        - HTMLAttributes
+        - HTML Snippets
+        - HTMLBeautify
         - Emmet - several snippets for web development
         - LiveStyle - Live bi-directional CSS edit of new generation
                     - if you edit the css by the browser, it is edit in the source file
@@ -78,24 +132,11 @@
         
     - Install the themes in ./sublime/
         - http://colorsublime.com/how-to-install-a-theme
+        - The theme that I've been using is the *1337.tmTheme*
 
-    - Copy the User Keybinds below to Preferences > User Keybinds
+    - Copy the content of ./sublime/my_keys.sublime-keymap into Preferences > Key Bindings User
 
-        ```
-        [
-        { "keys": ["shift+alt+f"], "command": "reindent" },
-
-        { "keys": ["ctrl+pagedown"], "command": "next_view_in_stack" },
-        { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
-        { "keys": ["ctrl+tab"], "command": "next_view" },
-        { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
-        { "keys": ["ctrl+t"], "command": "new_file" },
-        { "keys": ["ctrl+alt+r"], "command": "permute_lines", "args": {"operation": "reverse"} },
-        { "keys": ["ctrl+alt+h"], "command": "permute_lines", "args": {"operation": "shuffle"} },
-        { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} }
-        ]
-        ```
-    - Insert Custom User Preferences. Setting User:
+    - Insert Custom User Preferences > Setting User:
     "rulers": [100],
     "tab_size": 4,
     "translate_tabs_to_spaces": true
@@ -121,11 +162,16 @@
 
 - Clion:
 	- Download on https://www.jetbrains.com/clion/download/
+    - Force Font Anti-Alising:
+        - Open: clion_directory/bin/clion64.vmoptions and add:
+            -Dawt.useSystemAAFontSettings=on
+            -Dswing.aatext=true
+            -Dsun.java2d.xrender=true
 	- Import my custom (MyClionPreferences.jar) preferences on Clion:
 		- File > Import Setting
 		- My preferences includes color scheme, some configuration editor zoom with ctrl+scroll, show line number,
 		  font anti-aliasing, sublime-like keybind, etc.
-		- It is required the fonts: monaco.ttf and FreeSans.ttf 
+		- It is required the fonts: monaco.ttf and FreeSans.ttf
 	- To create snippets:
 		- File > Settings > Editor > Live Templates
 	- Some interesting Custom Keybinds:
