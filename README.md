@@ -45,6 +45,24 @@
 - Configure Sublime Text
     - Add the sublime font on Preferences > Settings User:
         "font_face": "monaco",
+        "font_size": 14
+
+    - Copy the content of ./sublime/my_keys.sublime-keymap into Preferences > Key Bindings User
+
+    - Insert Custom User Preferences > Setting User:
+    "rulers": [100],
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true
+
+    - Install the themes in ./sublime/
+        - http://colorsublime.com/how-to-install-a-theme
+        ```
+        $ cd ~/.config/sublime-text-3/Packages (<sublime-text-3 Packages directory>
+        $ mkdir Colorsublime-Themes
+        $ cp <elementary_script_dir>/sublime/*.tmTheme Colorsublime-Themes
+        ```
+        - The theme that I've been using is the *1337.tmTheme*
+
     - Install Package Control https://sublime.wbond.net/installation
     - Then, to install a package: On Sublime, press ctrl+shift+p, install Package and select the package
     - Some packages to install:
@@ -64,16 +82,17 @@
         - C++11
         - Markdown Preview
         - Aligntab
-        
+        - Fold Comments - ctrl+. to fold/unfold all comments in the text
+
         - Clang-Complete (Auto completion to C/C++)
             - https://packagecontrol.io/packages/Clang-Complete
             ```
-            $ cd <sublime-text-3 Packages directory>  # see note above
+            $ cd ~/.config/sublime-text-3/Packages (<sublime-text-3 Packages directory>  # see note above
             $ git clone https://github.com/lvzixun/Clang-Complete.git
             $ cd Clang-Complete
             $ make linux
             ```
-            - Go to the configuration file in *~/.config/sublime-text-3/Packages/Clang-Complete* and add the following content
+            - Go to the configuration file in *~/.config/sublime-text-3/Packages/Clang-Complete/cc.sublime-settings* and add the following content
             ```
             "additional_language_options":
             {
@@ -129,17 +148,6 @@
         - LiveStyle - Live bi-directional CSS edit of new generation
                     - if you edit the css by the browser, it is edit in the source file
         - HTML5 - snippets and bundlers for HTML5
-        
-    - Install the themes in ./sublime/
-        - http://colorsublime.com/how-to-install-a-theme
-        - The theme that I've been using is the *1337.tmTheme*
-
-    - Copy the content of ./sublime/my_keys.sublime-keymap into Preferences > Key Bindings User
-
-    - Insert Custom User Preferences > Setting User:
-    "rulers": [100],
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true
 
 
 - Terminal History - https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
@@ -167,6 +175,10 @@
             -Dawt.useSystemAAFontSettings=on
             -Dswing.aatext=true
             -Dsun.java2d.xrender=true
+    - Increase the JVM Memory
+        - Open: clion_directory/bin/clion64.vmoptions
+            -Xms1024m
+
 	- Import my custom (MyClionPreferences.jar) preferences on Clion:
 		- File > Import Setting
 		- My preferences includes color scheme, some configuration editor zoom with ctrl+scroll, show line number,

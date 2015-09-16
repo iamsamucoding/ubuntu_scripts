@@ -10,7 +10,12 @@
 { "keys": ["ctrl+alt+h"], "command": "permute_lines", "args": {"operation": "shuffle"} },
 { "keys": ["ctrl+alt+u"], "command": "permute_lines", "args": {"operation": "unique"} },
 
-
+// overrided shortcuts
 { "keys": ["alt+f4"], "command": "exit" },
-{ "keys": ["ctrl+q"], "command": "#" } // cancels the default ctrl+q command
+{ "keys": ["ctrl+q"], "command": "#" }, // cancels the default ctrl+q command
+
+{ "keys": ["alt+f4"], "command": "close_window" },
+
+    // Fold Comment Plugin
+{ "keys": ["ctrl+."],  "command": "toggle_fold_comments" }
 ]
