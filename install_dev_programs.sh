@@ -83,6 +83,9 @@ wget $LINK_MENDELEY -O $TEMP_DIR/mendeley.deb
 sudo dpkg -i $TEMP_DIR/mendeley.deb
 sudo apt-get -y install -f
 
+printf "\n---> Installing Latex MK compiler\n"
+sudo apt-get -y install latexmk
+
 printf "\n---> Installing Tex Live: It can take a long time.\n"
 # https://www.tug.org/texlive/quickinstall.html
 sudo rm -rf /usr/local/texlive/2014

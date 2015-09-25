@@ -18,6 +18,7 @@ LINK_SKYPE=http://www.skype.com/go/getskype-linux-beta-ubuntu-64
 LINK_SUBLIME=http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
 LINK_TEAM_VIEWER=http://download.teamviewer.com/download/teamviewer_i386.deb
 LINK_YOUTUBE_TO_MP3=http://www.mediahuman.com/download/YouTubeToMP3.amd64.deb
+LINK_WPS=http://kdl.cc.ksosoft.com/wps-community/download/a19/wps-office_9.1.0.4975~a19p1_amd64.deb
 
 #-- create tmp dir
 mkdir $OUT_DIR
@@ -32,6 +33,7 @@ sudo apt-get -y dist-upgrade
 printf "\n---> Installing Nice Fonts\n\n"
 mkdir ~/.fonts
 cp ./fonts/* ~/.fonts
+cp ./wps/wps_symbol_fonts/* ~/.fonts
 
 printf "\n---> Installing Chrome\n\n"
 wget $LINK_CHROME -O $TEMP_DIR/chrome.deb
@@ -108,6 +110,9 @@ sudo apt-get -y install furiusisomount
 printf "\n---> Alacarte - Menu editor\n"
 sudo apt-get -y install alacarte
 
+printf "\n---> KeePassX - Password Manager\n"
+sudo apt-get -y install keepassx
+
 printf "\n---> Xterm (PlayOnLinux dependency)\n"
 sudo apt-get -y install xterm
 
@@ -145,6 +150,11 @@ tar -xvf $TEMP_DIR/popcorn.tar.xz -C $OUT_DIR/Popcorn-Time
 printf "\n---> Installing YouTube To MP3\n"
 wget $LINK_YOUTUBE_TO_MP3 -O $TEMP_DIR/youtube.deb
 sudo dpkg -i $TEMP_DIR/youtube.deb
+sudo apt-get -y -f install
+
+printf "\n---> Installing WPS Office\n"
+wget $LINK_WPS -O $TEMP_DIR/wps.deb
+sudo dpkg -i $TEMP_DIR/wps.deb
 sudo apt-get -y -f install
 
 printf "\n---> Startup Disk Creator: USB Bootable\n"

@@ -74,6 +74,12 @@
         - ColorPicker: ctrl+shift+p, color... escolha a cor
         - Cython
         - LateXTool
+            + It's required to install: latexmk
+            + After Installing, Reconfigure LatexTools
+                * Preferences > Package Settings > LatexTools > Reconfigure LatexTool
+            + Edit custom settins in Preferences > Package Settings > LatexTools > Settings User:
+                * "keep_focus": false,
+                * "display_log" : true,
         - Git
         - Trimmer: helps you remove unnecessary spaces, as well as trailing spaces
         - DocBlockr: lets you create documentation or annotation for your codes with ease, by parsing the functions, parameters, variables, and automatically adding some possible documentation
@@ -299,6 +305,12 @@
 
 - Xampp
     - Download: https://www.apachefriends.org/xampp-files/5.6.8/xampp-linux-x64-5.6.8-0-installer.run
+
+- Kingsoft Office (WPS)
+    - Adding the pt_BR dict
+        - Check if the folder **~/.kingsoft/office6/dicts** exists, then:
+        ```$ cp ./wps/pt_BR ~/.kingsoft/office6/dicts -ax```
+        - Now, go to WPS and check: Review > Spell Check
 
 - Enable Banco do Brasil and Santander on Firefox
     ```
