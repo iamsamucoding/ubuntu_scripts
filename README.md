@@ -42,6 +42,12 @@
     - Go to System Settings > Tweaks > Applications > Files:
         - Turn off: Single click
 
+- Use the Nautilus
+    + Install nautilus if necessary;
+    + Add an icon in Main Menu (alacarte)
+        + A good icon is "/usr/share/icons/elementary/places/64/folder-documents.svg"
+        + The command is nautilus
+
 - Configure Sublime Text
     - Add the sublime font on Preferences > Settings User:
         "font_face": "monaco",
@@ -88,7 +94,9 @@
         - C++11
         - Markdown Preview
         - Aligntab
-        - Fold Comments - ctrl+. to fold/unfold all comments in the text
+        - Fold Comments
+            - Go to Preferences > Package Settings > Fold Comments > Key Bindings - Default
+            - Set: ctrl+. to fold/unfold all comments in the text
 
         - Clang-Complete (Auto completion to C/C++)
             - https://packagecontrol.io/packages/Clang-Complete
