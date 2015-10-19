@@ -100,11 +100,20 @@
 
         - Clang-Complete (Auto completion to C/C++)
             - https://packagecontrol.io/packages/Clang-Complete
+            - Install Clang (Check the Clang Version)
+            ```
+            $ wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -
+            $ sudo apt-get install clang-3.6 lldb-3.6
+            ```
+
             ```
             $ cd ~/.config/sublime-text-3/Packages (<sublime-text-3 Packages directory>  # see note above
+            $ cp -ax elementary_OS_scrips_dir/Clang-Complete .
+            or
             $ git clone https://github.com/lvzixun/Clang-Complete.git
-            $ cd Clang-Complete
-            $ make linux
+            $ cd ~/.config/sublime-text-3/Packages/Clang-Complete
+            $ ln -sf /usr/lib/llvm-3.6/lib/libclang-3.6.so.1 ./lib/libclang.so // check the llvm version installed and change it if necessary 
+            $ make cc_lib
             ```
             - Go to the configuration file in *~/.config/sublime-text-3/Packages/Clang-Complete/cc.sublime-settings* and add the following content
             ```
@@ -125,9 +134,9 @@
                 "-isystem", "/usr/include",
                 "-isystem", "/usr/include/c++/*",
                 "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.8/include/",
-                "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed",
-                "-isystem", "/usr/lib/llvm-3.5/lib/clang/3.5.0/include/",
-                "-isystem", "/usr/local/opt/llvm/include",
+                "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed",
+                "-isystem", "/usr/lib/llvm-3.6/lib/clang/3.6.0/include/",
+                "-isystem", "/usr/include/linux/",
                 "-Wall"
             ],
             ```
