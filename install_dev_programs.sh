@@ -1,19 +1,25 @@
 #!/bin/bash
 
+GIT_USERNAME=sbmmartins
+GIT_EMAIL=sbmmartins@gmail.com
+
+LINK_MENDELEY=https://www.mendeley.com/client/get/100-2/
+LINK_XAMPP=https://www.apachefriends.org/xampp-files/5.6.15/xampp-linux-x64-5.6.15-1-installer.run
+
 OUT_DIR=~/local
 TEMP_DIR=./tmp
 
-GIT_USERNAME=samuka
-GIT_EMAIL=sbmmartins@gmail.com
-
-LINK_ECLIPSE=http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/luna/SR2/eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz
-LINK_MENDELEY=https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
-LINK_PIP=https://bootstrap.pypa.io/get-pip.py
-
-#-- create tmp dir
 mkdir $OUT_DIR
 mkdir $TEMP_DIR
 rm -rf $TEMP_DIR/*
+
+printf "\n---> Installing Screen\n"
+sudo apt-get -y install screen
+
+printf "\n---> Installing Java JDK\n"
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install -y oracle-java8-installer
 
 printf "\n---> Installing VIM\n"
 sudo apt-get -y install vim
@@ -21,16 +27,25 @@ sudo apt-get -y install vim
 printf "\n---> Installing Cmake\n"
 sudo apt-get -y install cmake
 
+printf "\n---> Installing Clang\n"
+sudo apt-get -y install clang-3.8 lldb-3.8
+
 printf "\n---> Installing g++\n"
 sudo apt-get -y install g++
 
+printf "\n---> Installing Doxygen\n"
+sudo apt-get -y install doxygen
+
 printf "\n---> Color on GCC and g++\n"
-sudo apt-get install colorgcc
+sudo apt-get -y install colorgcc
 sudo ln -s /usr/bin/colorgcc /usr/local/sbin/g++
 sudo ln -s /usr/bin/colorgcc /usr/local/sbin/gcc
 
-printf "\n---> Installing Git\n"
-sudo apt-get install -y doxygen
+printf "\n---> Installing Lib PNG\n"
+sudo apt-get -y install libpng-dev
+
+printf "\n---> Installing ZLib\n"
+sudo apt-get -y install zlib1g-dev
 
 printf "\n---> Installing Git\n"
 sudo apt-get update
@@ -40,7 +55,7 @@ git config --global user.email $GIT_EMAIL
 git config --global color.ui auto
 
 printf "\n---> Installing SVN\n"
-sudo apt-get -y install subversion libapache2-svn
+sudo apt-get -y install subversion
 
 printf "\n---> Installing Htop\n"
 sudo apt-get -y install htop
@@ -72,32 +87,36 @@ sudo pip install Pillow
 printf "\n---> Installing Cython\n"
 sudo apt-get -y install cython
 
-printf "\n---> Installing Eclipse C/C++\n"
-wget $LINK_ECLIPSE -O $TEMP_DIR/eclipse.tar.gz
-tar -xvf $TEMP_DIR/eclipse.tar.gz -C $OUT_DIR
-sudo apt-get -y install -f
-sudo ln -s $OUT_DIR/eclipse/eclipse /usr/bin/
-
 printf "\n---> Installing Mendeley\n"
 wget $LINK_MENDELEY -O $TEMP_DIR/mendeley.deb
 sudo dpkg -i $TEMP_DIR/mendeley.deb
 sudo apt-get -y install -f
 
-printf "\n---> Installing Latex MK compiler\n"
-sudo apt-get -y install latexmk
+# printf "\n---> Installing Latex MK compiler\n"
+# sudo apt-get -y install latexmk
 
-printf "\n---> Installing Tex Live: It can take a long time.\n"
-# https://www.tug.org/texlive/quickinstall.html
-sudo rm -rf /usr/local/texlive/2014
-sudo rm -rf ~/.texlive2014
-wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O $TEMP_DIR/install-tl-unx.tar.gz
-tar -xvf $TEMP_DIR/install-tl-unx.tar.gz -C $OUT_DIR
-cd $OUT_DIR/install-tl* # the name can vary
-sudo ./install-tl
-# press i
-printf "\nPATH=$PATH:/usr/local/texlive/2014/bin/i386-linux\n" >> ~/.bashrc
-source ~/.bashrc
-cd -
-rm -rf $OUT_DIR/install-tl*
+# printf "\n---> Installing Tex Live: It can take a long time.\n"
+# # https://www.tug.org/texlive/quickinstall.html
+# sudo rm -rf /usr/local/texlive/2014
+# sudo rm -rf ~/.texlive2014
+# wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O $TEMP_DIR/install-tl-unx.tar.gz
+# tar -xvf $TEMP_DIR/install-tl-unx.tar.gz -C $OUT_DIR
+# cd $OUT_DIR/install-tl* # the name can vary
+# sudo ./install-tl
+# # press i
+# printf "\nPATH=$PATH:/usr/local/texlive/2014/bin/i386-linux\n" >> ~/.bashrc
+# source ~/.bashrc
+# cd -
+# rm -rf $OUT_DIR/install-tl*
+
+
+printf "\n---> Installing XAMPP\n"
+wget $LINK_XAMPP -O $TEMP_DIR/xampp.run
+sudo chmod +x $TEMP_DIR/xampp.run
+sudo ./$TEMP_DIR/xampp.run
+rm xampp.run
+
+printf "\n##########################################################\n"
 
 rm -rf $TEMP_DIR
+

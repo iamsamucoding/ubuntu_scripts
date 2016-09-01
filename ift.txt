@@ -1,21 +1,5 @@
 - Pre-requisites IFT:
-    - If the basic installation of Atlas, Blas, Lapack (not performance mode)
-        - put in ~/.bashrc
-            export ATLAS=/usr/lib/atlas-base/libatlas.so.3
-        - $ source ~/.bashrc
-        
-        - Add in ift/Makefile
-            - INCLUDES=-I$(INCLUDE) -I/usr/include/atlas/
-        - Add in ift/demo/ConvNetwork/Makefile and ift/demo/DataReduction/Makefile
-            -L/usr/lib/atlas-base/ - L/usr/lib/atlas-base/atlas
-
-    - If the performance installation (./atlas_+_numpy)
-        - put in ~/.bashrc
-            export ATLAS=/usr/local/atlas/lib/libtatlas.so
-        - $ source ~/.bashrc
-        - see instructions in ./atlas_+_numpy      
-    
     - Append into ~/.bashrc
-        - export NEWIFT_DIR=/home/samuka/workspace/ift
-        - PATH=$PATH:/home/samuka/workspace/ift/bin
+        - export NEWIFT_DIR=/home/sbmmartins/workspace/ift
+        - PATH=$PATH:/home/sbmmartins/workspace/ift/bin
         - $ source ~/.bashrc

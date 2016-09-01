@@ -17,5 +17,8 @@
 { "keys": ["alt+f4"], "command": "close_window" },
 
     // Fold Comment Plugin
-{ "keys": ["ctrl+."],  "command": "toggle_fold_comments" }
+{ "keys": ["ctrl+."],  "command": "toggle_fold_comments" },
+
+// toglle side bar like Clion
+{ "keys": ["alt+1"], "command": "toggle_side_bar" }
 ]

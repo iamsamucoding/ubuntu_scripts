@@ -1,0 +1,8 @@
+{
+    "color_scheme": "Packages/Colorsublime-Themes/1337.tmTheme",
+    "font_face": "monaco",
+    "font_size": 14,
+    "rulers": [100],
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true
+}

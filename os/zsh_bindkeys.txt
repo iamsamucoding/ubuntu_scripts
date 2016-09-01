@@ -1,0 +1,17 @@
+# history - up, down
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
+# Move between words - Ctrl+left Ctrl+right
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# enables the delete-char
+bindkey "\e[3~" delete-char
+
+# deletes forward word - ALT+del
+bindkey "^[[3;3~" kill-word
+
+# deletes/kills the whole line
+bindkey "^[k" kill-whole-line
+bindkey "^[K" kill-whole-line
