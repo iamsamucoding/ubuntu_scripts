@@ -166,6 +166,8 @@
     + Import the preferences: ./eclipse/my_preferences.epf
     + Install Subclipse plugin
         * Help > Eclipse marketplace > subclipse
+        * Help > Eclipse marketplace > column4eclipse
+        * Help > Eclipse marketplace > e(fx)clipse
         * To remove the JavaHL error when loading eclipse:
             - Window > Preferences > Team > SVN
             - Choose another "SVN Interface"

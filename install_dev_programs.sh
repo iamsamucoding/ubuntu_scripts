@@ -28,7 +28,7 @@ printf "\n---> Installing Cmake\n"
 sudo apt-get -y install cmake
 
 printf "\n---> Installing Clang\n"
-sudo apt-get -y install clang-3.8 lldb-3.8
+sudo apt-get -y install clang
 
 printf "\n---> Installing g++\n"
 sudo apt-get -y install g++
