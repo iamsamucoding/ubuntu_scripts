@@ -1,6 +1,10 @@
 ## Things to do after installing Apricity OS (an Arch Linux-based system)
 
 #### Installation Sequence
+0. Install NUmix Gnome Theme and Dash to Dock on Tweak Tool
+https://itsfoss.com/install-numix-ubuntu/
+https://micheleg.github.io/dash-to-dock/
+
 1. Install Common Programs
     - **script:** ./install_common_programs.sh
 
