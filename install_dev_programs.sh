@@ -14,8 +14,8 @@ OUT_DIR=~/local
 TEMP_DIR=./tmp
 
 mkdir $OUT_DIR
-# mkdir $TEMP_DIR
-# rm -rf $TEMP_DIR/*
+mkdir $TEMP_DIR
+rm -rf $TEMP_DIR/*
 
 # printf "\n---> Installing Screen\n"
 # sudo apt-get -y install screen
@@ -104,32 +104,32 @@ mkdir $OUT_DIR
 # wget $INTELLIJ -O $OUT_DIR/intellij.tar.gz
 # tar -zxvf $OUT_DIR/intellij.tar.gz -C $OUT_DIR
 
-printf "\n---> PyCharm\n"
-wget $PYCHARM -O $OUT_DIR/pycharm.tar.gz
-tar -zxvf $OUT_DIR/pycharm.tar.gz -C $OUT_DIR
+# printf "\n---> PyCharm\n"
+# wget $PYCHARM -O $OUT_DIR/pycharm.tar.gz
+# tar -zxvf $OUT_DIR/pycharm.tar.gz -C $OUT_DIR
 
-printf "\n---> RubyMine\n"
-wget $RUBY_MINE -O $OUT_DIR/rubymine.tar.gz
-tar -zxvf $OUT_DIR/rubymine.tar.gz -C $OUT_DIR
+# printf "\n---> RubyMine\n"
+# wget $RUBY_MINE -O $OUT_DIR/rubymine.tar.gz
+# tar -zxvf $OUT_DIR/rubymine.tar.gz -C $OUT_DIR
 
 
 
-# printf "\n---> Installing Latex MK compiler\n"
-# sudo apt-get -y install latexmk
+printf "\n---> Installing Latex MK compiler\n"
+sudo apt-get -y install latexmk
 
-# printf "\n---> Installing Tex Live: It can take a long time.\n"
-# # https://www.tug.org/texlive/quickinstall.html
-# sudo rm -rf /usr/local/texlive/2014
-# sudo rm -rf ~/.texlive2014
-# wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O $TEMP_DIR/install-tl-unx.tar.gz
-# tar -xvf $TEMP_DIR/install-tl-unx.tar.gz -C $OUT_DIR
-# cd $OUT_DIR/install-tl* # the name can vary
-# sudo ./install-tl
-# # press i
-# printf "\nPATH=$PATH:/usr/local/texlive/2014/bin/i386-linux\n" >> ~/.bashrc
-# source ~/.bashrc
-# cd -
-# rm -rf $OUT_DIR/install-tl*
+printf "\n---> Installing Tex Live: It can take a long time.\n"
+# https://www.tug.org/texlive/quickinstall.html
+sudo rm -rf /usr/local/texlive/2014
+sudo rm -rf ~/.texlive2014
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O $TEMP_DIR/install-tl-unx.tar.gz
+tar -xvf $TEMP_DIR/install-tl-unx.tar.gz -C $OUT_DIR
+cd $OUT_DIR/install-tl* # the name can vary
+sudo ./install-tl
+# press i
+printf "\nPATH=$PATH:/usr/local/texlive/2014/bin/i386-linux\n" >> ~/.bashrc
+source ~/.bashrc
+cd -
+rm -rf $OUT_DIR/install-tl*
 
 
 # printf "\n---> Installing XAMPP\n"
@@ -142,7 +142,7 @@ tar -zxvf $OUT_DIR/rubymine.tar.gz -C $OUT_DIR
 # sudo apt-get -y install postgresql
 
 
-# printf "\n##########################################################\n"
+printf "\n##########################################################\n"
 
 # rm -rf $TEMP_DIR
 

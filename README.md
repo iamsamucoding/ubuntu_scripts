@@ -275,3 +275,11 @@ https://micheleg.github.io/dash-to-dock/
         - Now, go to WPS and check: Review > Spell Check
     - Solving the Formula fonts missing
         `sudo cp -ax wps/wps_symbol_fonts/ /usr/share/fonts/wps-office/`
+
+
+- Important Python Packages
+    + Numpy
+    + Scipy
+    + Nibabel
+    + NiPype - http://miykael.github.io/nipype-beginner-s-guide/installation.html
+
