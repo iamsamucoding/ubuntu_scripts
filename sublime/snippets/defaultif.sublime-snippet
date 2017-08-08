@@ -1,0 +1,59 @@
+<snippet>
+    <content><![CDATA[
+#include "ift.h"
+
+
+/************************** HEADERS **************************/
+iftDict *iftGetArgs(int argc, const char *argv[]);
+/*************************************************************/
+
+
+
+
+
+int main(int argc, const char *argv[]) {
+    iftDict *args = iftGetArgs(argc, argv);
+
+    
+
+    // DESTROYERS
+    iftDestroyDict(&args);
+
+    return 0;
+}
+
+
+/************************** SOURCES **************************/
+iftDict *iftGetArgs(int argc, const char *argv[]) {
+    char program_description[2048] = \
+        "- Your program description.\n";
+
+    iftCmdLineOpt cmd_line_opts[] = {
+        {.short_name = "-a", .long_name = "--required-with-args", .has_arg=true, .arg_type=IFT_STR_TYPE,
+         .required=true, .help="Example of Required parameter with arguments."},
+        {.short_name = "-b", .long_name = "--required-without-args", .has_arg=false,
+         .required=true, .help="Example of Required parameter with arguments."},
+        {.short_name = "-c", .long_name = "--optional-with-args", .has_arg=true, .arg_type=IFT_STR_TYPE,
+         .required=false, .help="Example of Optional parameter with arguments."},
+        {.short_name = "-d", .long_name = "--optional-without-args", .has_arg=false,
+         .required=true, .help="Example of Optional parameter with arguments."},
+    };
+    int n_opts = sizeof(cmd_line_opts) / sizeof (iftCmdLineOpt);
+
+    // Parser Setup
+    iftCmdLineParser *parser = iftCreateCmdLineParser(program_description, n_opts, cmd_line_opts);
+    iftDict *args            = iftParseCmdLine(argc, argv, parser); // getting the passed options/arguments
+    iftDestroyCmdLineParser(&parser);
+
+    return args;
+}
+/*************************************************************/
+
+
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>defaultift</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.c</scope> -->
+</snippet>
