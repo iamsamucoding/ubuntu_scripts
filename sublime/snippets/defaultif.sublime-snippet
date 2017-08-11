@@ -14,6 +14,12 @@ iftDict *iftGetArgs(int argc, const char *argv[]);
 int main(int argc, const char *argv[]) {
     iftDict *args = iftGetArgs(argc, argv);
 
+    timer *t1 = iftTic();
+
+
+
+    puts("\nDone...");
+    puts(iftFormattedTime(iftCompTime(t1, iftToc())));
     
 
     // DESTROYERS
