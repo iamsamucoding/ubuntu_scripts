@@ -11,7 +11,13 @@ https://micheleg.github.io/dash-to-dock/
 2. Install Dev Programs
     - **script:** ./install_dev_programs.sh
 
-3. Install Atlas on Performance Mode (if necessary)
+3. Install Python Packages Programs
+    - **script:** ./install_python_packages.sh
+
+4. Set up my personal Sublime Configuration
+    - **script:** ./my_sublime_settings.sh
+
+5. Install Atlas on Performance Mode (if necessary)
     - Arch Linux references:
         + http://www.astr.tohoku.ac.jp/~akhlaghi/ATLAS_install.html
         + http://verahill.blogspot.com.br/2013/02/336-compiling-atlas-netblas-lapack-and.html
@@ -20,10 +26,10 @@ https://micheleg.github.io/dash-to-dock/
     - **info:** ./atlas_+_numpy/README.txt
     - If you cannot install it, install the normal version which is in **./install_dev_programs.sh**
 
-4. Do the Manual Installation
+6. Do the Manual Installation
     - Instructions below
 
-5. Install and Configure IFT
+7. Install and Configure IFT
     - see: ./ift.txt
 
 #### Manual Installation
@@ -34,33 +40,14 @@ https://micheleg.github.io/dash-to-dock/
 - Startup Applications
     + Startup applications > Add Skype
 
-- Configure Sublime Text
-    - Install Package Control https://sublime.wbond.net/installation
+- Sublime Packages
+    - ctrl + shift + p: Install Package Controls
 
-    - Install the themes in ./sublime/
-        - http://colorsublime.com/how-to-install-a-theme
-        ```
-        $ mkdir ~/.config/sublime-text-3/Packages/Colorsublime-Themes (<sublime-text-3 Packages directory>
-        $ cp ./sublime/*.tmTheme ~/.config/sublime-text-3/Packages/Colorsublime-Themes
-        ```
-        - The theme that I've been using is the *1337.tmTheme*
-            + Preferences > Color Scheme > Colorsublime-Themes
-
-    - Copy the content of ./sublime/my_settings.sublime-settings into Preferences > Settings - User
-
-    - Copy the content of ./sublime/my_keys.sublime-keymap into Preferences > Key Bindings - User
-
-    - Copy the Snippets:
-    `cp ./sublime/snippets/* ~/.config/sublime-text-3/Packages/User/`
-
-    - Then, to install a package: On Sublime, press ctrl+shift+p, install Package and select the package
-    
     - Some packages to install:
         - SideBarEnhancements
         - Alignment: ctrl+alt+a to align
         - BracketHighlighter
         - AStyleFormatter - ctrl+alt+f para alinhar todo o arquivo, ctrl+k+f para alinhar um trecho selecionado
-        - ColorPicker: ctrl+shift+p, color... escolha a cor
         - Cython
         - Javatar
         - LateXTool
@@ -74,19 +61,9 @@ https://micheleg.github.io/dash-to-dock/
                 * "env_auto_trigger": true,
         - LaTeX-cwl
         - Git
-        - Dictionaries
-            + View / Dictionaries
-        - Valgrind
-        - Trimmer: helps you remove unnecessary spaces, as well as trailing spaces
-        - DocBlockr: lets you create documentation or annotation for your codes with ease, by parsing the functions, parameters, variables, and automatically adding some possible documentation
-        - DoxyDoc: Doxygen on Sublime
-        - MarkDownEditing: edit .md
         - Markdown Preview
-        - FileDiffs:  allows you to see the differences between two files in SublimeText
         - C++11
         - Aligntab: aligns by : ; , .
-        - Anaconda (python programming)
-            + Set in the anaconda default config: "pep8": false 
         - VCSGutter (enables some symbols aside of the code to indicate SVN changes)
         - JsonLint
         - Fold Comments
@@ -107,7 +84,7 @@ https://micheleg.github.io/dash-to-dock/
             - Now
             ```
             $ cd ~/.config/sublime-text-3/Packages/Clang-Complete
-            $ ln -sf /usr/lib/libclang.so lib/libclang.so // check the llvm version installed and change it if necessary 
+            $ ln -sf /usr/lib/llvm-5.0/lib/libclang.so.1 lib/libclang.so // check the llvm version installed and change it if necessary 
             $ make cc_lib
             ```
             - Go to the configuration file in *~/.config/sublime-text-3/Packages/Clang-Complete/cc.sublime-settings* and add the following content
@@ -128,9 +105,9 @@ https://micheleg.github.io/dash-to-dock/
                [
                     "-isystem", "/usr/include",
                     "-isystem", "/usr/include/c++/*",
-                    "-isystem", "/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/include",
-                    "-isystem", "/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/include-fixed/",
-                    "-isystem", "/usr/lib/clang/3.7.1/include/",
+                    "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/5",
+                    "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/5-fixed/",
+                    "-isystem", "/usr/lib/clang/4.0/include/",
                     "-isystem", "/usr/include/linux/",
                     "-Wall"
                 ],
@@ -145,26 +122,6 @@ https://micheleg.github.io/dash-to-dock/
                 ]
             }
             ```
-        For Web
-        - LiveReload - realoads the web page automatically after saving the source.
-        - ColorHighlighter
-        - AutoFileName
-        - CSScomb // code style formatter
-        - Bootstrap3 Snippets
-        - Sass
-        - jQuery
-        - jQuery Snippets pack
-        - PHPIntel
-        - CSS Snippets
-        - CSS Completions
-        - CSS3
-        - HTMLAttributes
-        - HTML Snippets
-        - HTMLBeautify
-        - Emmet - several snippets for web development
-        - LiveStyle - Live bi-directional CSS edit of new generation
-                    - if you edit the css by the browser, it is edit in the source file
-        - HTML5 - snippets and bundlers for HTML5
 
 - Eclipse
     + Import the preferences: ./eclipse/my_preferences.epf
