@@ -24,6 +24,11 @@ sudo apt-get -y install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get -y install sublime-text
+mkdir ~/.config/sublime-text-3/Packages/Colorsublime-Themes
+cp ./sublime/*.tmTheme ~/.config/sublime-text-3/Packages/Colorsublime-Themes
+cp ./sublime/my_settings.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+cp sublime/my_keys.sublime-keymap ~/.config/sublime-text-3/Packages/User/Default\ \(Linux\).sublime-keymap
+cp ./sublime/snippets/* ~/.config/sublime-text-3/Packages/User/
 
 printf "\n---> Installing Terminator\n\n"
 sudo add-apt-repository -y ppa:gnome-terminator
@@ -49,13 +54,13 @@ wget $LINK_SKYPE -O $TEMP_DIR/skype.deb
 sudo dpkg -i $TEMP_DIR/skype.deb
 sudo apt-get -y -f install
 
-printf "\n---> Installing Kazam\n"
-sudo add-apt-repository -y ppa:kazam-team/stable-series
-sudo apt-get update
-sudo apt-get -y install kazam
+# printf "\n---> Installing Kazam\n"
+# sudo add-apt-repository -y ppa:kazam-team/stable-series
+# sudo apt-get update
+# sudo apt-get -y install kazam
 
-printf "\n---> Installing Cheese\n"
-sudo apt-get -y install cheese
+# printf "\n---> Installing Cheese\n"
+# sudo apt-get -y install cheese
 
 printf "\n---> Alacarte - Menu editor\n"
 sudo apt-get -y install alacarte
