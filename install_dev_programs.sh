@@ -18,7 +18,7 @@ printf "\n---> Installing Screen\n"
 sudo apt-get -y install screen
 
 printf "\n---> Installing Java JDK\n"
-sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install -y oracle-java8-installer
 
@@ -32,7 +32,7 @@ printf "\n---> Installing Clang\n"
 sudo apt-get -y install clang
 
 printf "\n---> Installing gcc-5\n"
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get -y install gcc-5 g++-5
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bin/g++ g++ /usr/bin/g++-5
@@ -64,7 +64,7 @@ printf "\n---> Installing Atlas, Lapack, and Blas\n"
 sudo apt-get -y install liblapack-dev libblas-dev libatlas-base-dev
 
 printf "\n---> Installing Atlas, Lapack, and Blas\n"
-sudo apt-get install python3-venv
+sudo apt-get -y install python3-venv
 python3 -m venv ~/yeah
 source ~/yeah/bin/activate
 echo "\n\nsource ~/yeah/bin/activate" >> ~/.bashrc

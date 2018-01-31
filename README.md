@@ -105,8 +105,8 @@ https://micheleg.github.io/dash-to-dock/
                [
                     "-isystem", "/usr/include",
                     "-isystem", "/usr/include/c++/*",
-                    "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/5",
-                    "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/5-fixed/",
+                    "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/5/include",
+                    "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed",
                     "-isystem", "/usr/lib/clang/4.0/include/",
                     "-isystem", "/usr/include/linux/",
                     "-Wall"

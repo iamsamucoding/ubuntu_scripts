@@ -74,7 +74,7 @@ sudo dpkg -i $TEMP_DIR/wps.deb
 sudo apt-get -y -f install
 
 printf "\n---> Installing Gimp\n"
-sudo add-apt-repository ppa:otto-kesselgulasch/gimp
+sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 sudo apt-get update
 sudo apt-get -y install gimp
 
