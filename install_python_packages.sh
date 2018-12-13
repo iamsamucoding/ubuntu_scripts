@@ -21,5 +21,11 @@ pip install jupyter
 printf "\n---> Scikit-Image\n"
 pip install scikit-image
 
+printf "\n---> Nibabel\n"
+pip install nibabel
+
+printf "\n---> SimpleITK\n"
+pip install SimpleITK
+
 printf "\n---> Installing Cython\n"
 sudo apt-get -y install cython
