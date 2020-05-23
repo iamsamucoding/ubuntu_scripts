@@ -62,7 +62,7 @@ printf "\n---> Installing Atlas, Lapack, and Blas\n"
 sudo apt-get -y install python3-venv
 python3 -m venv ~/yeah
 source ~/yeah/bin/activate
-echo "\n\nsource ~/yeah/bin/activate" >> ~/.bashrc
+printf "\n\nsource ~/yeah/bin/activate" >> ~/.bashrc
 
 printf "\n---> Installing VS Code\n"
 wget $LINK_CODE -O $TEMP_DIR/code.deb
