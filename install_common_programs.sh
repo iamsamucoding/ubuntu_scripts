@@ -4,7 +4,7 @@ OUT_DIR=~/local
 TEMP_DIR=./tmp
 
 LINK_SKYPE=https://go.skype.com/skypeforlinux-64.deb
-LINK_WPS=http://kdl1.cache.wps.com/ksodl/download/linux/a21//wps-office_10.1.0.5707~a21_amd64.deb
+LINK_WPS=http://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9505/wps-office_11.1.0.9505.XA_amd64.deb
 
 #-- create tmp dir
 mkdir $OUT_DIR
@@ -49,18 +49,18 @@ sudo apt-get -y install vlc
 printf "\n---> Installing Support for Archive Formats and Restricted Extras\n"
 sudo apt-get -y install unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
 
-printf "\n---> Installing Skype\n"
-wget $LINK_SKYPE -O $TEMP_DIR/skype.deb
-sudo dpkg -i $TEMP_DIR/skype.deb
-sudo apt-get -y -f install
+# printf "\n---> Installing Skype\n"
+# wget $LINK_SKYPE -O $TEMP_DIR/skype.deb
+# sudo dpkg -i $TEMP_DIR/skype.deb
+# sudo apt-get -y -f install
 
-# printf "\n---> Installing Kazam\n"
-# sudo add-apt-repository -y ppa:kazam-team/stable-series
-# sudo apt-get update
-# sudo apt-get -y install kazam
+printf "\n---> Installing Kazam\n"
+sudo add-apt-repository -y ppa:kazam-team/stable-series
+sudo apt-get update
+sudo apt-get -y install kazam
 
-# printf "\n---> Installing Cheese\n"
-# sudo apt-get -y install cheese
+printf "\n---> Installing Cheese\n"
+sudo apt-get -y install cheese
 
 printf "\n---> Alacarte - Menu editor\n"
 sudo apt-get -y install alacarte
