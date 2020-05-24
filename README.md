@@ -300,4 +300,3 @@ https://micheleg.github.io/dash-to-dock/
     + Scipy
     + Nibabel
     + NiPype - http://miykael.github.io/nipype-beginner-s-guide/installation.html
-
