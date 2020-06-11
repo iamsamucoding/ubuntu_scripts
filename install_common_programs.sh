@@ -78,6 +78,13 @@ sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 sudo apt-get update
 sudo apt-get -y install gimp
 
+printf "\n---> Latex\n"
+sudo apt -y install texlive-latex-base
+sudo apt -y install texlive-latex-extra
+sudo apt -y install texlive-fonts-extra
+sudo apt -y install latexmk
+
+
 printf "\n---> Installing Inkscape\n"
 sudo apt-get -y install inkscape
 
