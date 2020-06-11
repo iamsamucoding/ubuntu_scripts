@@ -79,6 +79,7 @@ sudo apt-get update
 sudo apt-get -y install gimp
 
 printf "\n---> Latex\n"
+sudo add-apt-repository ppa:texlive-backports/ppa
 sudo apt -y install texlive-full
 # sudo apt -y install texlive-latex-base
 # sudo apt -y install texlive-latex-extra
