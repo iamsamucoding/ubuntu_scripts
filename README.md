@@ -33,6 +33,30 @@ https://micheleg.github.io/dash-to-dock/
     - see: ./ift.txt
 
 #### Manual Installation
++ Fixing 'cedille' on US keyboard layouts
+    - Select the input method: *English (US, alt. intl.)*
+    - Open the files:
+        ```
+        sudo -H gedit /usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules.cache
+        sudo -H gedit /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules.cache
+        ```
+    - Change the line:
+        ```"cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"```
+    - to
+        ```"cedilla" "Cedilla" "gtk20" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa:en"```
+    - Replace "ć" with "ç" and "Ć" with "Ç" in ```/usr/share/X11/locale/en_US.UTF-8/Compose```
+        ```
+            sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
+            sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
+            sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
+        ```
+    - Add two lines in ```/etc/environment```
+        ```
+            GTK_IM_MODULE=cedilla
+            QT_IM_MODULE=cedilla
+        ```
+
+
 + Change the prompt display:
     + Put the following commands into ~/.profile (there is no ~/.bashrc in newest Mac OS)
         + PS1='\u@\h:\w\$ '
