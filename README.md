@@ -55,7 +55,14 @@ https://micheleg.github.io/dash-to-dock/
             GTK_IM_MODULE=cedilla
             QT_IM_MODULE=cedilla
         ```
-
++ How to Change Lid Close Action
+    - To change such a behavior with the pc "on charging" 
+        - sudo gedit /etc/systemd/logind.conf
+        - When the files opens, uncomment the line  *#HandleLidSwitchExternalPower=suspend* by removing # in the beginning, and change the value to:
+            - ```poweroff, shutdown``` ==> power off when lid is closed.
+            - ```hibernate``` ==> hibernate when lid is closed (need to test if hibernate works).
+            - ```ignore``` ==> do nothing.
+            - ```suspend``` ==> suspend laptop when lid is closed.
 
 + Change the prompt display:
     + Put the following commands into ~/.profile (there is no ~/.bashrc in newest Mac OS)
