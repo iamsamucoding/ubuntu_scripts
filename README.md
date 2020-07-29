@@ -346,3 +346,30 @@ https://micheleg.github.io/dash-to-dock/
     + Scipy
     + Nibabel
     + NiPype - http://miykael.github.io/nipype-beginner-s-guide/installation.html
+
+- Configure Wacom Intuos Draw CTL-490
+    - Although Gnome has a native support for wacom, sometimes it cannot fully recognize the tablet.
+    - Install drivers: [https://github.com/linuxwacom/input-wacom/wiki/Installing-input-wacom-from-source](https://github.com/linuxwacom/input-wacom/wiki/Installing-input-wacom-from-source)
+        ```
+        sudo apt-get install build-essential autoconf linux-headers-$(uname -r)
+        git clone git@github.com:linuxwacom/input-wacom.git
+        cd input-wacom
+        if test -x ./autogen.sh; then ./autogen.sh; else ./configure; fi && make && sudo make install || echo "Build Failed"
+        ```
+    - Configure buttons: [https://joshuawoehlke.com/wacom-intuos-and-xsetwacom-on-ubuntu-18-04/](https://joshuawoehlke.com/wacom-intuos-and-xsetwacom-on-ubuntu-18-04/)
+        - Identify wacom tablet's id: ```xsetwacom --list devices```
+            + Id is from Wacom Intuos S Pad pad
+        - Customizing the pad buttons
+            + Now using one command for each button, assign a key sequence to it beginning with the word “key.” For multiple keys, leave a space between the keys.
+            + upper-left button: *button 3*
+            + bottom-left button: *button 1*
+            + upper-right button: *button 9*
+            + bottom-right button: *button 8*
+        - I chose the following shortcuts for such buttons (id 11 was my wacom id):
+            ```
+            xsetwacom --set 11 button 3 "key ctrl z"  # undo for some applications
+            xsetwacom --set 11 button 1 "key ctrl y"  # redo for some applications
+            xsetwacom --set 11 button 9 "key PgUp"
+            xsetwacom --set 11 button 8 "key PgDn"
+            ```
+
