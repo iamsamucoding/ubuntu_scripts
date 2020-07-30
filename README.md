@@ -70,6 +70,24 @@ https://micheleg.github.io/dash-to-dock/
     sudo ./install 
     ``` 
 
++ Installing CamDesk
+    - Donwnload installation files: [https://sourceforge.net/projects/camdesk/files/latest/download](https://sourceforge.net/projects/camdesk/files/latest/download)
+    - Install CamDesk
+    ```
+    sudo apt -y install libgconf-2-4  # dependencies
+
+    tar xvfz camdesk-1.1-lin.tar.gz  # it installs on $HOME/CamDesk
+    mkdir -p $HOME/local  # my local programs' dir
+    mv $HOME/CamDesk $HOME/local
+    sudo ln -f $HOME/local/CamDesk/electron /usr/local/bin
+
+    ```
+    - Create a launcher on menu (alacarte)
+        - name: CamDesk
+        - command: $HOME/local/CamDesk/electron
+        - icon: $HOME/local/CamDesk/resources/default_app/logo.svg
+
+
 + How to Change Lid Close Action
     - To change such a behavior with the pc "on charging" 
         - sudo gedit /etc/systemd/logind.conf
