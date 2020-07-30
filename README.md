@@ -87,6 +87,25 @@ https://micheleg.github.io/dash-to-dock/
         - command: $HOME/local/CamDesk/electron
         - icon: $HOME/local/CamDesk/resources/default_app/logo.svg
 
++ DroidCam
+    - Installing:
+    ```
+    cd /tmp/
+    wget https://files.dev47apps.net/linux/droidcam_latest.zip
+    echo "73db3a4c0f52a285b6ac1f8c43d5b4c7 droidcam_latest.zip" | md5sum -c --
+    #OK?
+    unzip droidcam_latest.zip -d droidcam && cd droidcam
+    sudo ./install
+    ```
+    - Adding a laucher on menu (alacarte)
+        ```
+        mkdir $HOME/local/droidcam
+        cp droidcam/droidcam-logo.png $HOME/local/droidcam
+        ```
+        - name: DroidCam
+        - command: droidcam
+        - icon: $HOME/local/droidcam/droidcam-logo.png
+
 
 + How to Change Lid Close Action
     - To change such a behavior with the pc "on charging" 
