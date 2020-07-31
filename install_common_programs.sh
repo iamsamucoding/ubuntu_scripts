@@ -49,15 +49,20 @@ sudo apt-get -y install vlc
 printf "\n---> Installing Support for Archive Formats and Restricted Extras\n"
 sudo apt-get -y install unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
 
-# printf "\n---> Installing Skype\n"
-# wget $LINK_SKYPE -O $TEMP_DIR/skype.deb
-# sudo dpkg -i $TEMP_DIR/skype.deb
-# sudo apt-get -y -f install
+printf "\n---> Installing Skype\n"
+wget $LINK_SKYPE -O $TEMP_DIR/skype.deb
+sudo dpkg -i $TEMP_DIR/skype.deb
+sudo apt-get -y -f install
 
 printf "\n---> Installing Kazam\n"
 sudo add-apt-repository -y ppa:kazam-team/stable-series
 sudo apt-get update
 sudo apt-get -y install kazam
+
+printf "\n---> Installing Simple Screen Recorder\n"
+sudo apt-add-repository -y ppa:maarten-baert/simplescreenrecorder
+sudo apt-get update
+sudo apt-get install -y simplescreenrecorder
 
 printf "\n---> Installing Cheese\n"
 sudo apt-get -y install cheese
@@ -79,13 +84,13 @@ sudo apt-get update
 sudo apt-get -y install gimp
 
 printf "\n---> Latex\n"
-sudo add-apt-repository ppa:texlive-backports/ppa
-sudo apt -y install texlive-full
+# sudo add-apt-repository ppa:texlive-backports/ppa
+# sudo apt -y install texlive-full
 # sudo apt -y install texlive-latex-base
 # sudo apt -y install texlive-latex-extra
 # sudo apt -y install texlive-fonts-recommended
 # sudo apt -y install texlive-fonts-extra
-sudo apt -y install latexmk
+# sudo apt -y install latexmk
 
 
 printf "\n---> Installing Inkscape\n"
@@ -93,14 +98,12 @@ sudo apt-get -y install inkscape
 
 printf "\n---> Installing Brave\n"
 sudo apt install apt-transport-https curl
-
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-
 sudo apt update
-
 sudo apt -y install brave-browser
+
+
 
 printf "\n##########################################################\n"
 
