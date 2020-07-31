@@ -103,6 +103,24 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable ma
 sudo apt update
 sudo apt -y install brave-browser
 
+printf "\n---> Installing Office 365\n"  # https://github.com/sirredbeard/unofficial-webapp-office
+snap install unofficial-webapp-office
+
+printf "\n---> Installing One Drive\n"  # https://github.com/skilion/onedrive
+sudo apt install -y libcurl4-openssl-dev
+sudo apt install -y libsqlite3-dev
+sudo snap install --classic dmd && sudo snap install --classic dub
+
+mkdir -p $HOME/local; cd $HOME/local
+git clone https://github.com/skilion/onedrive.git
+cd onedrive
+make
+sudo make install
+
+# uninstall
+# sudo make uninstall
+## delete the application state
+# rm -rf .config/onedrive
 
 
 printf "\n##########################################################\n"
