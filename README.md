@@ -99,12 +99,12 @@ https://micheleg.github.io/dash-to-dock/
     ```
     - Adding a laucher on menu (alacarte)
         ```
-        mkdir $HOME/local/droidcam
+        mkdir -p $HOME/local/droidcam
         cp droidcam/droidcam-logo.png $HOME/local/droidcam
         ```
         - name: DroidCam
         - command: droidcam
-        - icon: $HOME/local/droidcam/droidcam-logo.png
+        - icon: $HOME/local/droidcam/droidcam-logo.pngm
 
 
 + How to Change Lid Close Action
