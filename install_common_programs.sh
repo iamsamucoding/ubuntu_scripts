@@ -83,6 +83,9 @@ sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 sudo apt-get update
 sudo apt-get -y install gimp
 
+printf "\n---> Installing PDF Printer\n"
+sudo apt-get -y install cups-pdf  # pdf files are printed into folder ~/your_user/PDF
+
 printf "\n---> Latex\n"
 # sudo add-apt-repository ppa:texlive-backports/ppa
 # sudo apt -y install texlive-full
