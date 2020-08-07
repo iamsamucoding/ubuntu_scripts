@@ -70,13 +70,24 @@ https://micheleg.github.io/dash-to-dock/
     sudo ./install 
     ``` 
 
+    	- Adding a laucher on menu (alacarte)
+        ```
+        mkdir -p $HOME/local/droidcam
+        cp droidcam/droidcam-logo.png $HOME/local/droidcam
+        ```
+        - name: DroidCam
+        - command: droidcam
+        - icon: $HOME/local/droidcam/droidcam-logo.pngm
+
 + Installing CamDesk
     - Donwnload installation files: [https://sourceforge.net/projects/camdesk/files/latest/download](https://sourceforge.net/projects/camdesk/files/latest/download)
     - Install CamDesk
     ```
     sudo apt -y install libgconf-2-4  # dependencies
 
-    tar xvfz camdesk-1.1-lin.tar.gz  # it installs on $HOME/CamDesk
+    tar xvfz camdesk-1.1-lin.tar.gz
+    cd ExtractedFoleder
+    bash make.sh  # it installs on $HOME/CamDesk
     mkdir -p $HOME/local  # my local programs' dir
     mv $HOME/CamDesk $HOME/local
     sudo ln -f $HOME/local/CamDesk/electron /usr/local/bin
@@ -86,26 +97,7 @@ https://micheleg.github.io/dash-to-dock/
         - name: CamDesk
         - command: $HOME/local/CamDesk/electron
         - icon: $HOME/local/CamDesk/resources/default_app/logo.svg
-
-+ DroidCam
-    - Installing:
-    ```
-    cd /tmp/
-    wget https://files.dev47apps.net/linux/droidcam_latest.zip
-    echo "73db3a4c0f52a285b6ac1f8c43d5b4c7 droidcam_latest.zip" | md5sum -c --
-    #OK?
-    unzip droidcam_latest.zip -d droidcam && cd droidcam
-    sudo ./install
-    ```
-    - Adding a laucher on menu (alacarte)
-        ```
-        mkdir -p $HOME/local/droidcam
-        cp droidcam/droidcam-logo.png $HOME/local/droidcam
-        ```
-        - name: DroidCam
-        - command: droidcam
-        - icon: $HOME/local/droidcam/droidcam-logo.pngm
-
+ 
 
 + How to Change Lid Close Action
     - To change such a behavior with the pc "on charging" 
