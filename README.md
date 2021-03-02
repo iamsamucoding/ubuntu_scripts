@@ -5,6 +5,9 @@
 https://itsfoss.com/install-numix-ubuntu/
 https://micheleg.github.io/dash-to-dock/
 
+0.5. Install Drivers for TP-LINK AC600
+- https://github.com/aircrack-ng/rtl8812au
+
 1. Install Common Programs
     - **script:** ./install_common_programs.sh
 
@@ -83,7 +86,7 @@ https://micheleg.github.io/dash-to-dock/
     - Donwnload installation files: [https://sourceforge.net/projects/camdesk/files/latest/download](https://sourceforge.net/projects/camdesk/files/latest/download)
     - Install CamDesk
     ```
-    sudo apt -y install libgconf-2-4  # dependencies
+    sudo apt install -y libgconf-2-4  # dependencies
 
     tar xvfz camdesk-1.1-lin.tar.gz
     cd ExtractedFoleder
@@ -162,6 +165,14 @@ https://micheleg.github.io/dash-to-dock/
     ```
 
     I use the colors: PS1='\[\033[0;94m\]\u\[\033[0m\]@\[\033[0;33m\]\h\[\033[0m\]:\w\$ '
+
+    To make git branchs available on terminal, use the following codes:
+
+    function parse_git_branch() {
+        git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ (\1)/"
+    }
+
+    PS1="\[\033[0;94m\]\u\[\033[0;33m\]@\h\[\033[32m\]:\w\[\033[91m\]\$(parse_git_branch)\[\033[00m\]$ "
 
 - Configure VC Code
     + Install the plugin: Settings Sync
