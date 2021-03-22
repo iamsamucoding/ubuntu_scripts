@@ -59,6 +59,11 @@ https://micheleg.github.io/dash-to-dock/
             QT_IM_MODULE=cedilla
         ```
 
++ Microsoft Teams: Fixing the opening meeting link on linux:
+  - The last line in `/usr/bin/teams` should be:
+    - `nohup "$TEAMS_PATH" "$@" --disable-namespace-sandbox --disable-setuid-sandbox > "$TEAMS_LOGS/teams-startup.log" 2>&1 &`
+
+
 + Android phone as a webcam
     ```
     sudo apt-get install gmtp
