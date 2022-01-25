@@ -80,12 +80,6 @@
         "command": "editor.action.goToDeclaration"
     },
     {
-        "win": "alt+-",
-        "linux": "alt+-",
-        "key": "ctrl+-",
-        "command": "workbench.action.navigateBack"
-    },
-    {
         "win": "alt+shift+-",
         "linux": "alt+shift+-",
         "key": "ctrl+shift+-",
